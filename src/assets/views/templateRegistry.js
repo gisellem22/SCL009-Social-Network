@@ -5,16 +5,21 @@ import { registry } from './../js/validationsAuth.js';
 
 export const templateRegistry = () => {
   document.getElementById('root').innerHTML = `       
-  <section alt="root">
+  
   <div class="screen-sign-up">
-    <h1 class="title-sign-up">Registrarse</h1>
+  <div class="logo-name">
+  <img class="logoRegistry" src="assets/img/Group.png">
+  </div>
+  <div class="registry-div">
+    <h1 class="title-sign-up">Registro</h1>
     <input id="input-email" type="email" placeholder="Correo electrónico"></input><br>
     <input id="input-password" type="password" placeholder="Contraseña"></input><br>
     <p id="wrong"></p>
     <button id="btn-create">Crear una cuenta</button>
     <button id="btn-back-home">Volver</button>
   </div>
-</section>
+  </div>
+
  `
  document.getElementById('btn-create').addEventListener('click', () => {
   let email = document.getElementById('input-email').value;

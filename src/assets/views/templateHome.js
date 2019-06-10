@@ -3,17 +3,18 @@ import { templateWall } from './templateWall.js';
 
 export const templateHome = () => {
   document.getElementById('root').innerHTML = `       
-  <section alt="root">
+  
   <div class="screen-home">
-      <button id="btn-registry">Registrarse</button> 
-      <h1>GIVING</h1>
+      <h1 class="name">GIVING</h1>
+      <img class="logoHome" src="assets/img/Group.png">
+      <input id="input-email" type="email" placeholder="Correo electrónico"></input>
+      <input id="input-password" type="password" placeholder="Contraseña"></input>
+      <button id="btn-sign-in">Iniciar Sesión</button> 
       <button id="btn-sign-in-google">Ingresar con Google</button>
-      <div class="line-home"></div>
-      <input id="input-email-home" type="email" placeholder="Correo electrónico"></input>
-      <input id="input-password-home" type="password" placeholder="Contraseña"></input>
-      <button id="btn-sign-in">Iniciar Sesión</button>  
-  </div>
-</section>
+      <p>¿No tienes cuenta?</p>
+      <button id="btn-registry">Regístrate</button>
+   </div>
+
 
  `
 
@@ -22,8 +23,8 @@ export const templateHome = () => {
     window.location.hash = '#/registry';
   })
 
-  document.getElementById('btn-sign-in').addEventListener('click', () => {
+  /*document.getElementById('btn-sign-in').addEventListener('click', () => {
     templateWall();
     window.location.hash = '#/wall';
-  })
+  })*/
 }
