@@ -1,7 +1,6 @@
 import { templateHome } from './templateHome.js';
 import { registryUser } from './../js/firebaseAuth.js';
-import { registry } from './../js/validationsAuth.js';
-//import { registry } from './validations.js';
+import { validationAuth } from './../js/validationsAuth.js';
 
 export const templateRegistry = () => {
   document.getElementById('root').innerHTML = `       
@@ -16,7 +15,7 @@ export const templateRegistry = () => {
     <input id="input-password" type="password" placeholder="Contraseña"></input><br>
     <p id="wrong"></p>
     <button id="btn-create">Crear una cuenta</button>
-    <button id="btn-back-home">Volver</button>
+    <button id="btn-back-home">Volver a Inicio</button>
   </div>
   </div>
 
@@ -29,31 +28,19 @@ export const templateRegistry = () => {
 
   //registryUser(email,password);
 
- let confirmRegistry = registry(email,password);
+ let confirmRegistry = validationAuth(email,password);
  console.log(confirmRegistry);
 
  if(confirmRegistry === true){
+  Swal.fire('Estás registrado.Te hemos enviado un correo de confirmación')
    registryUser(email,password);
  }else{
   document.getElementById('wrong').innerHTML = 'Datos no válidos';
  }
 
- /* templateHome();
+  /*templateHome();
   window.location.hash = '#/home';*/
 })
-
- /*document.getElementById('btn-create').addEventListener('click', () => {
- let email = document.getElementById('input-email').value;
- let password = document.getElementById('input-password').value;
- console.log(email);
- console.log(password);
- })*/
- /*if(email === true && password === true){
-  registryUser(email,password);
- }
- if(email === false && passwrod === false){}
-    document.getElementById('wrong').innerHTML = "No válido";
-})*/
 
   document.getElementById('btn-back-home').addEventListener('click', () => {
     templateHome();

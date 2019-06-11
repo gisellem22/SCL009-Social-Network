@@ -23,8 +23,8 @@ export const templateHome = () => {
     window.location.hash = '#/registry';
   })
 
-  /*document.getElementById('btn-sign-in').addEventListener('click', () => {
+  document.getElementById('btn-sign-in').addEventListener('click', () => {
     templateWall();
     window.location.hash = '#/wall';
-  })*/
+  })
 }
