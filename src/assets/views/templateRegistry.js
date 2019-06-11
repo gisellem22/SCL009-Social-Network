@@ -16,7 +16,7 @@ export const templateRegistry = () => {
     <input id="input-password" type="password" placeholder="Contraseña"></input><br>
     <p id="wrong"></p>
     <button id="btn-create">Crear una cuenta</button>
-    <button id="btn-back-home">Volver</button>
+    <button id="btn-back-home">Volver a Inicio</button>
   </div>
   </div>
 
@@ -33,27 +33,13 @@ export const templateRegistry = () => {
 let confirmRegistry = validationAuth(email,password);
  console.log(confirmRegistry);
 
- if(confirmRegistry){
-  Swal.fire('Un mensaje de confirmación fue enviado a tu correo'); 
+ if(confirmRegistry){ 
   registryUser(email, password) 
  }
 
- /* templateHome();
+  /*templateHome();
   window.location.hash = '#/home';*/
 })
-
- /*document.getElementById('btn-create').addEventListener('click', () => {
- let email = document.getElementById('input-email').value;
- let password = document.getElementById('input-password').value;
- console.log(email);
- console.log(password);
- })*/
- /*if(email === true && password === true){
-  registryUser(email,password);
- }
- if(email === false && passwrod === false){}
-    document.getElementById('wrong').innerHTML = "No válido";
-})*/
 
   document.getElementById('btn-back-home').addEventListener('click', () => {
     templateHome();

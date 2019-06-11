@@ -28,6 +28,7 @@ let user = firebase.auth().currentUser;
 user.sendEmailVerification().then(function() {
  //si sendemail resulta, se ejecuta el then, de lo contrario se ejecuta catch
  // Email sent.
+ Swal.fire('Un mensaje de confirmación fue enviado a tu correo');
  console.log('enviando correo');
 }).catch(function(error) {
  // An error happened.
