@@ -1,6 +1,6 @@
 import { templateHome } from './templateHome.js';
 import { registryUser } from './../js/firebaseAuth.js';
-import { registry } from './../js/validationsAuth.js';
+import { validationAuth } from './../js/validationAuth.js';
 //import { registry } from './validations.js';
 
 export const templateRegistry = () => {
@@ -29,13 +29,13 @@ export const templateRegistry = () => {
 
   //registryUser(email,password);
 
- let confirmRegistry = registry(email,password);
+ 
+let confirmRegistry = validationAuth(email,password);
  console.log(confirmRegistry);
 
- if(confirmRegistry === true){
-   registryUser(email,password);
- }else{
-  document.getElementById('wrong').innerHTML = 'Datos no válidos';
+ if(confirmRegistry){
+  Swal.fire('Un mensaje de confirmación fue enviado a tu correo'); 
+  registryUser(email, password) 
  }
 
  /* templateHome();
