@@ -1,3 +1,9 @@
-import { logoutMessage } from './assets/js/auth.js';
+import { initRoute } from './route.js';
+import { firebaseInit } from './assets/js/firebaseinit.js';
 
-logoutMessage(1);
+const init = () => {
+initRoute();
+firebaseInit();
+};
+
+window.addEventListener('load', init);
