@@ -1,6 +1,6 @@
 import { templateHome } from './templateHome.js';
 import { registryUser } from './../js/firebaseAuth.js';
-import { validationAuth } from './../js/validationsAuth.js';
+import { validationAuth } from './../js/validationAuth.js';
 
 export const templateRegistry = () => {
   document.getElementById('root').innerHTML = `       
