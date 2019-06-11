@@ -7,6 +7,7 @@ export const registryUser = (email,password) => {
 
 firebase.auth().createUserWithEmailAndPassword(email, password)
 .then(()=>{
+  emailVerification()
   templateHome();
   window.location.hash = '#/home';
 })
@@ -20,4 +21,16 @@ firebase.auth().createUserWithEmailAndPassword(email, password)
 });
 
 }
+//función para enviar correo de confirmación
+function emailVerification(){
+let user = firebase.auth().currentUser;
 
+user.sendEmailVerification().then(function() {
+ //si sendemail resulta, se ejecuta el then, de lo contrario se ejecuta catch
+ // Email sent.
+ console.log('enviando correo');
+}).catch(function(error) {
+ // An error happened.
+ console.log(error);
+});
+}
