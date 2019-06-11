@@ -1,13 +1,16 @@
 //import todas las vistas
+//el orden da lo mismo
 
-import { templateSignUp } from './assets/views/templateSignUp.js';
-import { templateSignIn} from './assets/views/templateSignIn.js';
 import { templateHome } from './assets/views/templateHome.js';
+import { templateRegistry } from './assets/views/templateRegistry.js';
+import { templateWall } from './assets/views/templateWall.js';
+
 
 const changeRoute = (hash) => {
-  if (hash === '#/signup' || hash === '#/signin' || hash === '#/home' || hash === '' || hash === '#/' || hash === '/#') {
+  if (hash === '#/home' || hash === '#/registry' || hash === '#/wall' || hash === '' || hash === '#/' || hash === '/#') {
     return showTemplate(hash)
   }
+  return showTemplate(hash)
 }
 
 // segunda función showTemplate(hash)
@@ -19,14 +22,14 @@ const showTemplate = (hash) => {
   containerRoot.innerHTML = '';
 
   switch (router) {
-    case 'signup':
-      templateSignUp();
-      break;
-    case 'signin':
-      templateSignIn();
-      break;
     case 'home':
       templateHome();
+      break;
+    case 'registry':
+      templateRegistry();
+      break;
+    case 'wall':
+      templateWall();
       break;
     case '':
       templateHome();
@@ -35,12 +38,15 @@ const showTemplate = (hash) => {
       containerRoot.innerHTML = `<h1>Error 404</h1>`
   }
 }
-
-export const initRoute = () => {
+ //esta funcion es la primera que se ejecuta, reconoce los cambios del hash,
+ //cuando carga y si es que hay cualquier cambio en ek navegador, escibir en la barra del navegador
+ //cada vez que encuntra un cambio lo pasa a changeroute
+export const initRouter = () => {
   // cuando la ventana se carga saca el hash y se lo pasa a changeRoute
   window.addEventListener('load', changeRoute(window.location.hash));
 
   // si encuentra un cambio en el hash lo vuelve a sacar y pasar como parámetro a changeRoute
+ 
   if ('onhashchange' in window) {
     window.onhashchange = () => {
       changeRoute(window.location.hash);

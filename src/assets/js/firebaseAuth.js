@@ -1,26 +1,18 @@
-import { firebaseInit } from "./firebaseInit";
+//debe ser un const registro, que tenga que ver con fb
+//aqui van las funciones exportadas 
 
-// Export logutMessage function
-export const logoutMessage = (status) => {
-  // Check if there's a status
-  if (status) {
-    // If there is, print Goodbye
-    console.log("Goodbye");
-  }
-}
+export const registryUser = (email,password) => {
+  //console.log(email);
+  //console.log(password);
+//la funcion de firebase para crear usuario
+firebase.auth().createUserWithEmailAndPassword(email, password)
+.catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  // ...
+  //console.log(errorCode);
+  //console.log(errorMessage);
+});
 
-// Export user object
-export const user = {
-  name: 'ale',
-  job: 'coach'
-}
-
-
-
-// simulación de como se comunica auth con app.js
-export const authMail = (email) => {
-  if (email === '') {
-    return alert('No estoy listo para iniciar sesión');
-  }
-  alert(`Vamos a iniciar sesión con el correo: ${email}`)
 }
