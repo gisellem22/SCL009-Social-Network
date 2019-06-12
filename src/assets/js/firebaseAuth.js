@@ -18,6 +18,9 @@ firebase.auth().createUserWithEmailAndPassword(email, password)
   // ...
   console.log(errorCode);
   console.log(errorMessage);
+  if (errorCode === "auth/email-already-in-use"){
+    document.getElementById('wrong').innerHTML = 'Correo ya está siendo utilizado';  
+  }
 });
 
 }

@@ -6,17 +6,26 @@ import { validationAuth } from './../js/validationAuth.js';
 export const templateRegistry = () => {
   document.getElementById('root').innerHTML = `       
   
+  <div class="flex-center">
   <div class="screen-sign-up">
   <div class="logo-name">
   <img class="logoRegistry" src="assets/img/Group.png">
   </div>
+  </div>
+
+  <div class="flex-center">
   <div class="registry-div">
+  <div class="title-div">
     <h1 class="title-sign-up">Registro</h1>
-    <input id="input-email" type="email" placeholder="Correo electrónico"></input><br>
-    <input id="input-password" type="password" placeholder="Contraseña"></input><br>
+  </div>
+  <div class="inputs-div">
+    <input class="inputs-entrada" id="input-email" type="email" placeholder="Correo electrónico"></input><br>
+    <input class="inputs-entrada" id="input-password" type="password" placeholder="Contraseña"></input><br>
     <p id="wrong"></p>
-    <button id="btn-create">Crear una cuenta</button>
-    <button id="btn-back-home">Volver a Inicio</button>
+  </div> 
+    <button class="btn-botones" id="btn-create">Crear una cuenta</button><br>
+    <button class="btn-botones" id="btn-back-home">Volver a Inicio</button>
+  </div>
   </div>
   </div>
 
@@ -35,6 +44,8 @@ let confirmRegistry = validationAuth(email,password);
 
  if(confirmRegistry){ 
   registryUser(email, password) 
+ } else {
+  document.getElementById('wrong').innerHTML = 'Datos incorrectos, Contraseña debe tener mínimo 6 caracteres'
  }
 
   /*templateHome();
