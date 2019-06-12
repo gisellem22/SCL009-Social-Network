@@ -7,7 +7,7 @@ describe('validationAuth ', () => {
         expect(validationAuth("ale@gmail.com","234567")).toBe(true);
  
     })
-    it('deberia retornar false, para un correo y contraseña incorrecto', () => {
+    it('deberia retornar Ingresa email válido, para un correo vacío o incorrecto', () => {
         expect(validationAuth("","")).toBe(false);
         expect(validationAuth("","123456")).toBe(false);
         expect(validationAuth("claudia@gmail.com","")).toBe(false);

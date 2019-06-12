@@ -1,6 +1,7 @@
 import { templateHome } from './templateHome.js';
 import { registryUser } from './../js/firebaseAuth.js';
 import { validationAuth } from './../js/validationAuth.js';
+//import { registry } from './validations.js';
 
 export const templateRegistry = () => {
   document.getElementById('root').innerHTML = `       
@@ -20,27 +21,27 @@ export const templateRegistry = () => {
   </div>
 
  `
- document.getElementById('btn-create').addEventListener('click', () => {
-  let email = document.getElementById('input-email').value;
-  let password = document.getElementById('input-password').value;
- // console.log(email);
-  //console.log(password);
+  document.getElementById('btn-create').addEventListener('click', () => {
+    let email = document.getElementById('input-email').value;
+    let password = document.getElementById('input-password').value;
+    // console.log(email);
+    //console.log(password);
 
-  //registryUser(email,password);
+    //registryUser(email,password);
 
- let confirmRegistry = validationAuth(email,password);
- console.log(confirmRegistry);
 
- if(confirmRegistry === true){
-  Swal.fire('Estás registrado.Te hemos enviado un correo de confirmación')
-   registryUser(email,password);
- }else{
-  document.getElementById('wrong').innerHTML = 'Datos no válidos';
- }
+    let confirmRegistry = validationAuth(email, password);
+    console.log(confirmRegistry);
 
-  /*templateHome();
-  window.location.hash = '#/home';*/
-})
+    if (confirmRegistry) {
+      registryUser(email, password)
+    } else {
+      document.getElementById('wrong').innerHTML = 'Datos incorrectos, contraseña debe tener mínimo 6 caracteres';
+    }
+
+    /*templateHome();
+    window.location.hash = '#/home';*/
+  })
 
   document.getElementById('btn-back-home').addEventListener('click', () => {
     templateHome();
