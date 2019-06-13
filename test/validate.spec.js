@@ -26,5 +26,6 @@ describe('validationEmail ', () => {
         expect(validationEmail("")).toBe(false);
         expect(validationEmail("clau")).toBe(false);
          expect(validationEmail("")).not.toBe(true);
+
     })
 })
