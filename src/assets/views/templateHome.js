@@ -3,7 +3,6 @@ import { templateWall } from './templateWall.js';
 
 export const templateHome = () => {
   document.getElementById('root').innerHTML = ` 
-
   <div class="flex-center">
   <div class="screen-home">
   <div class="flex-center">
@@ -22,6 +21,7 @@ export const templateHome = () => {
       </div>    
    </div>
 </div>
+
 
  `
 

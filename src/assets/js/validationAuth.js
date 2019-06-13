@@ -1,11 +1,9 @@
-
 export const validationAuth = (password) => {
     if (password === "" || password.length < 6) {
         return false;
     } else {
         return true;
     }
-
 }
 
 export const validationEmail = (email) => {
