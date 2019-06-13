@@ -1,11 +1,10 @@
 import { templateHome } from './templateHome.js';
 import { registryUser } from './../js/firebaseAuth.js';
 import { validationAuth } from './../js/validationAuth.js';
-//import { registry } from './validations.js';
+import { validationEmail } from './../js/validationAuth.js';
 
 export const templateRegistry = () => {
   document.getElementById('root').innerHTML = `       
-  
   <div class="flex-center">
   <div class="screen-sign-up">
   <div class="logo-name">
@@ -30,27 +29,31 @@ export const templateRegistry = () => {
   </div>
 
  `
- document.getElementById('btn-create').addEventListener('click', () => {
-  let email = document.getElementById('input-email').value;
-  let password = document.getElementById('input-password').value;
- // console.log(email);
-  //console.log(password);
+  document.getElementById('btn-create').addEventListener('click', () => {
+    let email = document.getElementById('input-email').value;
+    let password = document.getElementById('input-password').value;
+    // console.log(email);
+    //console.log(password);
 
-  //registryUser(email,password);
+    let confirmRegistry = validationAuth(password);
+    //console.log(confirmRegistry);
+    let confirmEmail =  validationEmail(email);
 
- 
-let confirmRegistry = validationAuth(email,password);
- console.log(confirmRegistry);
+    if (confirmRegistry) {
+      registryUser(email, password)
+    } else {
+      document.getElementById('wrong').innerHTML = 'contraseña debe tener mínimo 6 caracteres';
+    }
 
- if(confirmRegistry){ 
-  registryUser(email, password) 
- } else {
-  document.getElementById('wrong').innerHTML = 'Datos incorrectos, Contraseña debe tener mínimo 6 caracteres'
- }
+    if (confirmEmail) {
+      registryUser(email, password)
+    } else {
+      document.getElementById('wrong').innerHTML = 'Ingresa email válido';
+    }
 
-  /*templateHome();
-  window.location.hash = '#/home';*/
-})
+    /*templateHome();
+    window.location.hash = '#/home';*/
+  })
 
   document.getElementById('btn-back-home').addEventListener('click', () => {
     templateHome();

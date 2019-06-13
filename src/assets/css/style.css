@@ -1,4 +1,6 @@
 /*HOME*/
+
+
 * {
     margin:0;
     padding:0;
@@ -7,6 +9,7 @@
 body{
     background-color:rgb(234, 236, 78);
 }
+
 .screen-home{
     text-align: center;
     display: block;   
@@ -41,20 +44,15 @@ body{
  }
 
  /*REGISTRO*/
-
  .logoRegistry{
     width: 4rem;
     height: 4rem;
-
 }
-
 .registry-div{
     text-align: center;
 }
-
-
 @media screen and (min-width:780px) and (max-width:1024px){
-    
+   
     .inputs-entrada{
     width: 400px;
     height: 30px; 
@@ -76,7 +74,6 @@ body{
         }
 }
 @media screen and (max-width:480px){
-   
     .inputs-entrada{
         width: 300px;
         height: 30px; 
@@ -85,4 +82,3 @@ body{
         width: 300px;
         height: 30px;
     }
-}
