@@ -42,7 +42,7 @@ export const templateRegistry = () => {
     if (confirmRegistry) {
       registryUser(email, password)
     } else {
-      document.getElementById('wrong').innerHTML = 'contraseña debe tener mínimo 6 caracteres';
+      document.getElementById('wrong').innerHTML = 'Contraseña debe tener mínimo 6 caracteres';
     }
 
     if (confirmEmail) {
