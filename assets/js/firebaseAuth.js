@@ -53,6 +53,7 @@ export const authGoogle = () => {
     // ...
     templateWall();
     window.location.hash = '#/wall';
+    
   }).catch(function(error) {
     // Handle Errors here.
     let errorCode = error.code;
