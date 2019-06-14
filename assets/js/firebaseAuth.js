@@ -1,5 +1,5 @@
 import { templateHome } from './../views/templateHome.js';
-import { templateWall } from './templateWall.js';
+import { templateWall } from './../views/templateWall.js';
 
 export const registryUser = (email,password) => {
   //console.log(email);
