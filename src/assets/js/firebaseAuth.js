@@ -50,7 +50,7 @@ export const authGoogle = () => {
     // The signed-in user info.
     let user = result.user;
     // ...
-  
+    window.location.hash = '#/wall';
   }).catch(function(error) {
     // Handle Errors here.
     let errorCode = error.code;

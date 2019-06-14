@@ -48,20 +48,29 @@ Una vez identificado el problema y el tipo de usuario, se procedió a diseñar l
 
 Prototipo de baja fidelidad:
 
+![sketch1](src/assets/img/sketch1.jpg)
+
 Prototipo de alta fidelidad (Figma):
 
 Inicio y Registro de Usuario:
+
 ![FIGMA1](src/assets/img/FIGMA1.jpg)
 
 Home y Escribir publicación:
+
 ![figma3](src/assets/img/figma3.jpg)
 
 Muro:
+
 ![FIGMA2](src/assets/img/FIGMA2.jpg)
 
 
 ## TESTEOS DE USUARIOS
 
+Se realizaron testeos de usabilidad, mostrando el [Deploy](https://gisellem22.github.io/SCL009-Social-Network/index.html)  
+
+
+![entrevista1](src/assets/img/entrevista1.jpg)
 
 
 ### FUTURAS MEJORAS
