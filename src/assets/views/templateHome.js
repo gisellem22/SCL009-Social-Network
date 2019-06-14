@@ -1,5 +1,5 @@
 import { templateRegistry } from './templateRegistry.js';
-import { templateWall } from './templateWall.js';
+//import { templateWall } from './templateWall.js';
 import { authGoogle } from './../js/firebaseAuth.js';
 
 export const templateHome = () => {
