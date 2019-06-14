@@ -9,7 +9,9 @@
 body{
     background-color:rgb(234, 236, 78);
 }
-
+.logo-name {
+    font-family: "Allerta Stencil", Sans-serif;
+}
 .screen-home{
     text-align: center;
     display: block;   

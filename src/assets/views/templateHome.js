@@ -6,7 +6,7 @@ export const templateHome = () => {
   <div class="flex-center">
   <div class="screen-home">
   <div class="flex-center">
-      <h1 class="name">GIVING</h1>
+      <h1 class="logo-name">GIVING</h1>
       <img class="logoHome" src="assets/img/Group.png">
    </div>  
    <div class="flex-center"> 
