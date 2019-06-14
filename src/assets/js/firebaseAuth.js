@@ -1,4 +1,5 @@
 import { templateHome } from './../views/templateHome.js';
+import { templateWall } from './../views/templateWall.js';
 
 export const registryUser = (email,password) => {
   //console.log(email);
@@ -50,7 +51,9 @@ export const authGoogle = () => {
     // The signed-in user info.
     let user = result.user;
     // ...
+    templateWall();
     window.location.hash = '#/wall';
+    
   }).catch(function(error) {
     // Handle Errors here.
     let errorCode = error.code;

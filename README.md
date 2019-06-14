@@ -46,11 +46,11 @@ Criterios de Aceptación:
 
 Una vez identificado el problema y el tipo de usuario, se procedió a diseñar la plataforma en distintos formatos.
 
-Prototipo de baja fidelidad:
+## Prototipo de baja fidelidad:
 
 ![sketch1](src/assets/img/sketch1.jpg)
 
-Prototipo de alta fidelidad (Figma):
+## Prototipo de alta fidelidad (Figma):
 
 Inicio y Registro de Usuario:
 
@@ -64,6 +64,7 @@ Muro:
 
 ![FIGMA2](src/assets/img/FIGMA2.jpg)
 
+[Link a Proyecto en Figma](https://www.figma.com/proto/034UEmKr1BQkoUob7Tm0RyKM/Giving?node-id=0%3A1&scaling=scale-down)
 
 ## TESTEOS DE USUARIOS
 
