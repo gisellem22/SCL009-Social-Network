@@ -1,5 +1,6 @@
 import { templateRegistry } from './templateRegistry.js';
 import { templateWall } from './templateWall.js';
+import { authGoogle } from './../js/firebaseAuth.js';
 
 export const templateHome = () => {
   document.getElementById('root').innerHTML = ` 
@@ -24,30 +25,9 @@ export const templateHome = () => {
 
 
  `
-
- /*<div class="flex-center">
- <div class="screen-sign-up">
- <div class="logo-name">
- <img class="logoRegistry" src="assets/img/Group.png">
- </div>
- </div>
-
- <div class="flex-center">
- <div class="registry-div">
- <div class="title-div">
-   <h1 class="title-sign-up">Registro</h1>
- </div>
- <div class="inputs-div">
-   <input id="input-email" type="email" placeholder="Correo electrónico"></input><br>
-   <input id="input-password" type="password" placeholder="Contraseña"></input><br>
-   <p id="wrong"></p>
- </div> 
-   <button id="btn-create">Crear una cuenta</button>
-   <button id="btn-back-home">Volver a Inicio</button>
- </div>
- </div>
- </div>*/
-
+  document.getElementById('btn-sign-in-google').addEventListener('click', () => {
+    authGoogle();
+  })
 
 
   document.getElementById('btn-registry').addEventListener('click', () => {
